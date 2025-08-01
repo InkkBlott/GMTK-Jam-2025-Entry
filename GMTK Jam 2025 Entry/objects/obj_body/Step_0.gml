@@ -1,0 +1,1 @@
+if (anisprite != noone) anisprite.step()

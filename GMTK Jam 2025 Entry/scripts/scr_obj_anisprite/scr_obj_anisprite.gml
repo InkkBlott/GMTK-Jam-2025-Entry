@@ -117,6 +117,22 @@ function Anisprite(animset, inp_handler=noone) constructor {
 			draw_offset_x = dcos(ang)*dist
 			draw_offset_y = 0-dsin(ang)*dist
 		}
+		draw_sprite_ext(current_anim.sprites[anim_orientation],subimg,draw_x+draw_offset_x+secondary_offset_x,draw_y+draw_offset_y+secondary_offset_y,draw_scale_x,draw_scale_y,angle,c_white,alpha)
+	}
+	/// @function get_draw_offset()
+	/// @desc get the cumulative offset draw() would calculate and use if it were called()
+	// returns a [x, y] array
+	static get_draw_offset = function() {
+		var current_anim = animations[anim]
+		var draw_offset_x = offset_x + current_anim.offset_x
+		var draw_offset_y = offset_y + current_anim.offset_y
+		if (offset_rotation and angle != 0) {
+			var ang = point_direction(0,0,draw_offset_x,draw_offset_y) + angle
+			var dist = point_distance(0,0,draw_offset_x,draw_offset_y)
+			draw_offset_x = dcos(ang)*dist
+			draw_offset_y = 0-dsin(ang)*dist
+		}
+		return [draw_offset_x+secondary_offset_x, draw_offset_y+secondary_offset_y]
 	}
 	/// @function set_anim(new_anim)
 	/// @param {real} new_anim Index of new animation to set

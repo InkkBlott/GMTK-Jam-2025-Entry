@@ -7,28 +7,6 @@ global.anisprite_methods[$ "character horizontal flip"] = function() { //flip An
 	if (c > 0 and flipped_x) { flipped_x = false }
 	else if (c < 0 and !flipped_x) { flipped_x = true }
 }
-global.anisprite_methods[$ "character vertical orientation"] = function() { //set Anisprite animation orientation based on character's vertical orientation
-	var c = dsin(face_direction)
-	if (c < 0 and anim_orientation != 0) { anim_orientation = 0 }
-	else if (c > 0 and anim_orientation != 1) {  anim_orientation = 1 }
-}
-
-global.anisprite_methods[$ "basic character step"] = function() {
-	face_direction = handler.face_direction
-	method(self,global.anisprite_methods[$ "character horizontal flip"])()
-	method(self,global.anisprite_methods[$ "character vertical orientation"])()
-}
-
-global.anisprite_methods[$ "aijou run fx 1"] = function() {
-	var o = handler.world.create_instance(obj_h_fxAnim, handler.x-3, handler.y+14)
-	o.set_anisprite("fxAnim: circlespark small")
-	o.destroy_on_animation_end = true
-}
-global.anisprite_methods[$ "aijou run fx 2"] = function() {
-	var o = handler.world.create_instance(obj_h_fxAnim, handler.x+3, handler.y+14)
-	o.set_anisprite("fxAnim: circlespark small")
-	o.destroy_on_animation_end = true
-}
 #endregion Anisprite Methods
 
 #region Anisprite Types
@@ -47,20 +25,70 @@ global.anisprite_methods[$ "aijou run fx 2"] = function() {
 global.anisprite_types = {}
 
 #region Characters
-#region MC
-global.anisprite_types[$ "hacker aijou"] = [ //hacker aijou gameplay sprite
-	{sprites: [spr_hack_aijou_00_A, spr_hack_aijou_00_B], //0: standing
+#region Player Character
+global.anisprite_types[$ "Alchemist"] = [ //hacker aijou gameplay sprite
+	{sprites: [spr_player_00], //0: idle
 	offset_x: 0,
 	offset_y: 0,
 	frame_offset: undefined,
-	default_speed: 0.1,
-	frame_sequence: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,2,2,2,2,0,0,3,0,0,0,0,3],
+	default_speed: 0.2,
+	frame_sequence: undefined,
 	loop_frame: 0,
 	frame_function: undefined,
-	anim_step: global.anisprite_methods[$ "basic character step"]
+	anim_step: global.anisprite_methods[$ "character horizontal flip"]
+	},
+	{sprites: [spr_player_01], //1: walking
+	offset_x: 0,
+	offset_y: 0,
+	frame_offset: undefined,
+	default_speed: 0.2,
+	frame_sequence: undefined,
+	loop_frame: 0,
+	frame_function: undefined,
+	anim_step: global.anisprite_methods[$ "character horizontal flip"]
+	},
+	{sprites: [spr_player_01], //2: jumping/falling
+	offset_x: 0,
+	offset_y: 0,
+	frame_offset: undefined,
+	default_speed: 0,
+	frame_sequence: [4, 6],
+	loop_frame: undefined,
+	frame_function: undefined,
+	anim_step: global.anisprite_methods[$ "character horizontal flip"]
+	},
+	{sprites: [spr_player_02], //3: attack
+	offset_x: 0,
+	offset_y: 0,
+	frame_offset: undefined,
+	default_speed: 0.2,
+	frame_sequence: undefined,
+	loop_frame: 0,
+	frame_function: undefined,
+	anim_step: global.anisprite_methods[$ "character horizontal flip"]
+	},
+	{sprites: [spr_player_03], //4: hurt
+	offset_x: 0,
+	offset_y: 0,
+	frame_offset: undefined,
+	default_speed: 0.2,
+	frame_sequence: undefined,
+	loop_frame: 0,
+	frame_function: undefined,
+	anim_step: global.anisprite_methods[$ "character horizontal flip"]
+	},
+	{sprites: [spr_player_04], //5: death
+	offset_x: 0,
+	offset_y: 0,
+	frame_offset: undefined,
+	default_speed: 0.2,
+	frame_sequence: undefined,
+	loop_frame: undefined,
+	frame_function: undefined,
+	anim_step: global.anisprite_methods[$ "character horizontal flip"]
 	},
 ]
-#endregion MC
+#endregion Player Character
 #endregion Characters
 
 #endregion Anisprite Types

@@ -1,0 +1,1 @@
+m_collision_targets = global.game.collision_layer
