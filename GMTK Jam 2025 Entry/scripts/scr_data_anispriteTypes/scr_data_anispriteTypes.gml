@@ -26,7 +26,7 @@ global.anisprite_types = {}
 
 #region Characters
 #region Player Character
-global.anisprite_types[$ "Alchemist"] = [ //hacker aijou gameplay sprite
+global.anisprite_types[$ "Alchemist"] = [ //main playable platformer character
 	{sprites: [spr_player_00], //0: idle
 	offset_x: 0,
 	offset_y: 0,
@@ -82,13 +82,70 @@ global.anisprite_types[$ "Alchemist"] = [ //hacker aijou gameplay sprite
 	offset_y: 0,
 	frame_offset: undefined,
 	default_speed: 0.2,
-	frame_sequence: undefined,
+	frame_sequence: [0, 0, 1, 0, 1, 0, 1],
 	loop_frame: undefined,
 	frame_function: undefined,
 	anim_step: global.anisprite_methods[$ "character horizontal flip"]
 	},
 ]
 #endregion Player Character
+#region Enemies
+global.anisprite_types[$ "Test Enemy"] = [ //Slime
+	{sprites: [spr_e_test01_00], //0: idle
+	offset_x: 0,
+	offset_y: 0,
+	frame_offset: undefined,
+	default_speed: 0.2,
+	frame_sequence: [0, 0, 0, 1, 2, 3, 3, 3, 2, 1],
+	loop_frame: 0,
+	frame_function: undefined,
+	anim_step: global.anisprite_methods[$ "character horizontal flip"]
+	},
+	{sprites: [spr_e_test01_00], //1: moving
+	offset_x: 0,
+	offset_y: 0,
+	frame_offset: undefined,
+	default_speed: 0.2,
+	frame_sequence: [2, 4],
+	loop_frame: 0,
+	frame_function: undefined,
+	anim_step: global.anisprite_methods[$ "character horizontal flip"]
+	},
+	{sprites: [spr_e_test01_00], //2: attacking
+	offset_x: 0,
+	offset_y: 0,
+	frame_offset: undefined,
+	default_speed: 0.2,
+	frame_sequence: [5, 6],
+	loop_frame: 0,
+	frame_function: undefined,
+	anim_step: global.anisprite_methods[$ "character horizontal flip"]
+	},
+	{sprites: [spr_e_test01_00], //3: hurt
+	offset_x: 0,
+	offset_y: 0,
+	frame_offset: undefined,
+	default_speed: 0.3,
+	frame_sequence: [7, 7, 8, 7, 8, 7, 8],
+	loop_frame: undefined,
+	frame_function: undefined,
+	anim_step: global.anisprite_methods[$ "character horizontal flip"]
+	},
+]
+#endregion Enemies
 #endregion Characters
-
+#region Items
+global.anisprite_types[$ "Test Item"] = [ //Coin
+	{sprites: [spr_itemTest_00], //0: idle
+	offset_x: 0,
+	offset_y: 0,
+	frame_offset: undefined,
+	default_speed: 0.2,
+	frame_sequence: undefined,
+	loop_frame: 0,
+	frame_function: undefined,
+	anim_step: undefined
+	},
+]
+#endregion Items
 #endregion Anisprite Types

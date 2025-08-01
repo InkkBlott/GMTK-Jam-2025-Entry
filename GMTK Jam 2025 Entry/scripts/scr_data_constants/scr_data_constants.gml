@@ -9,7 +9,37 @@ enum DEPTH_LEVELS {
 	NPC,
 	SFX_MINOR,
 	BACKGROUND,
-	BACKDROP,
+	BACKDROP
 }
 
-enum MOVE_DIRECTION { LEFT, RIGHT, UP, DOWN, NEUTRAL }
+enum DIRECTION {
+	LEFT, 
+	RIGHT, 
+	UP, 
+	DOWN, 
+	NEUTRAL
+}
+
+enum COMBAT_ALIGNMENT {
+	NEUTRAL,
+	PLAYER,
+	ENEMY,
+}
+
+#region Character Action Codes
+
+enum ACTCODE_CHARACTER {
+	__START = 0,
+	IDLE,
+	STUN,
+	WAIT,
+	__END
+}
+
+enum ACTCODE_PLAYER {
+	__START = ACTCODE_CHARACTER.__END,
+	TETHER,
+	__END
+}
+
+#endregion Character Action Codes

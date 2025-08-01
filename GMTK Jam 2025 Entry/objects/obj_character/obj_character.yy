@@ -9,8 +9,8 @@
   "name":"obj_character",
   "overriddenProperties":[],
   "parent":{
-    "name":"bodies",
-    "path":"folders/Objects/bodies.yy",
+    "name":"Bodies",
+    "path":"folders/Objects/Bodies.yy",
   },
   "parentObjectId":{
     "name":"obj_body",
