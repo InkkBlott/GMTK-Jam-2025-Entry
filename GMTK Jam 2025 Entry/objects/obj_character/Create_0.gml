@@ -15,7 +15,6 @@ m_jumping = false
 m_jumpPower = 5
 m_grav_normal = 0.4
 m_grav_jumping = 0.2
-m_grounded = false
 
 //combat
 c_hp = 1

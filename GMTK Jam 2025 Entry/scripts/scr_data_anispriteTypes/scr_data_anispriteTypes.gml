@@ -88,6 +88,28 @@ global.anisprite_types[$ "Alchemist"] = [ //main playable platformer character
 	anim_step: global.anisprite_methods[$ "character horizontal flip"]
 	},
 ]
+global.anisprite_types[$ "Companion"] = [ //Player companion character
+	{sprites: [spr_companion_00], //0: flying
+	offset_x: 0,
+	offset_y: 0,
+	frame_offset: undefined,
+	default_speed: 0.12,
+	frame_sequence: [0, 1],
+	loop_frame: 0,
+	frame_function: undefined,
+	anim_step: global.anisprite_methods[$ "character horizontal flip"]
+	},
+	{sprites: [spr_companion_00], //1: gliding
+	offset_x: 0,
+	offset_y: 0,
+	frame_offset: undefined,
+	default_speed: 0.1,
+	frame_sequence: [2],
+	loop_frame: undefined,
+	frame_function: undefined,
+	anim_step: undefined
+	},
+]
 #endregion Player Character
 #region Enemies
 global.anisprite_types[$ "Test Enemy"] = [ //Slime

@@ -22,8 +22,8 @@
   "layers":[
     {"$GMRTileLayer":"","%Name":"lyr_tiles_fg","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"lyr_tiles_fg","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":29,"SerialiseWidth":75,"TileCompressedData":[
           -689,-2147483648,3,50,51,52,-38,-2147483648,3,50,51,52,-31,-2147483648,3,62,63,64,-38,-2147483648,3,
-          62,63,64,-31,-2147483648,3,74,75,76,-38,-2147483648,3,74,75,76,-32,-2147483648,1,87,-40,-2147483648,
-          1,87,-33,-2147483648,1,99,-40,-2147483648,1,99,-1143,-2147483648,
+          62,63,64,-31,-2147483648,3,74,75,76,-38,-2147483648,3,74,75,76,-16,-2147483648,1,0,-15,-2147483648,1,
+          87,-40,-2147483648,1,87,-33,-2147483648,1,99,-40,-2147483648,1,99,-1143,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"ts_world","path":"tilesets/ts_world/ts_world.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"lyr_instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_player","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_player","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":705.0,"y":128.0,},
@@ -37,15 +37,15 @@
         {"$GMRInstance":"v2","%Name":"inst_75C1D2C2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_75C1D2C2","objectId":{"name":"obj_i_testItem","path":"objects/obj_i_testItem/obj_i_testItem.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":856.0,"y":183.0,},
         {"$GMRInstance":"v2","%Name":"inst_36FD1DCF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_36FD1DCF","objectId":{"name":"obj_i_testItem","path":"objects/obj_i_testItem/obj_i_testItem.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":996.0,"y":186.0,},
         {"$GMRInstance":"v2","%Name":"inst_7BC7E25A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7BC7E25A","objectId":{"name":"obj_i_testItem","path":"objects/obj_i_testItem/obj_i_testItem.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1103.0,"y":159.0,},
-      ],"layers":[],"name":"lyr_instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+      ],"layers":[],"name":"lyr_instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":true,"visible":true,},
     {"$GMRTileLayer":"","%Name":"lyr_tiles_collision","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"lyr_tiles_collision","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":29,"SerialiseWidth":75,"TileCompressedData":[
           -246,-2147483648,-2,0,-74,-2147483648,1,0,-73,-2147483648,-2,0,-57,-2147483648,-10,0,-5,-2147483648,
           1,0,-59,-2147483648,-10,0,-4,-2147483648,1,0,-60,-2147483648,-10,0,-13,-2147483648,-9,0,-43,-2147483648,
           -10,0,-13,-2147483648,4,0,63,0,10,-5,0,-42,-2147483648,-11,0,-13,-2147483648,2,0,75,-7,0,-7,-2147483648,
           -3,7,-33,-2147483648,-10,0,-12,-2147483648,3,18,0,87,-3,0,1,10,-3,0,-12,-2147483648,1,8,-16,-2147483648,
-          -2,7,2,-2147483648,36,-5,-2147483648,-4,15,1,-2147483648,-10,0,6,-2147483648,38,33,34,35,27,-6,-2147483648,
-          3,18,0,99,-7,0,-11,-2147483648,3,8,20,36,-15,-2147483648,-2,30,-7,5,2,-2147483648,3,-3,-2147483648,-10,
-          0,-10,-2147483648,7,18,-2147483648,18,0,4,0,10,-4,0,-4,4,-7,-2147483648,5,8,20,8,36,36,-3,-2147483648,
+          -2,7,2,-2147483648,36,-4,-2147483648,1,32,-4,15,1,-2147483648,-10,0,6,-2147483648,38,33,34,35,27,-6,
+          -2147483648,3,18,0,99,-7,0,-11,-2147483648,3,8,20,36,-15,-2147483648,-2,30,-7,5,2,-2147483648,3,-3,-2147483648,
+          -10,0,-10,-2147483648,7,18,-2147483648,18,0,4,0,10,-4,0,-4,4,-7,-2147483648,5,8,20,8,36,36,-3,-2147483648,
           1,36,-4,-2147483648,1,36,-4,-2147483648,-3,30,-4,5,-2,-2147483648,3,67,-2147483648,3,-7,39,1,9,-4,10,
           1,11,-6,2,-2,-2147483648,-5,2,-14,4,-5,2,5,20,2,20,8,8,-10,31,-4,30,-5,27,-3,-2147483648,3,67,-2147483648,
           -2147483648,-6,1,1,0,-6,-2147483648,-6,5,7,3,-2147483648,-2147483648,3,3,-2147483648,-2147483648,-8,
